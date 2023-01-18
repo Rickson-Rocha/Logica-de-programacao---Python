@@ -17,7 +17,7 @@ Atualmente sou graduando em Sistemas para Internet pelo **instituto Federal de C
 <p> Os  tópicos de programção imperativa,estrutural e procedural a serem abordados serão os seguintes: </p>
 
 <ul>
-  <li>Estrutura Sequencial (C:\Users\zerob\OneDrive\Documentos\Logica de programacao\Estrutura Sequencial)</li>
+  <li>Estrutura Sequencial :(C:\Users\zerob\OneDrive\Documentos\Logica de programacao\Estrutura Sequencial)</li>
   <li>Estrutura de Decisão</li>
   <li>Estrutura de Repetição</li>
   <li>Listas</li>
