@@ -27,7 +27,7 @@ Atualmente sou graduando em Sistemas para Internet pelo **instituto Federal de C
 </ul>
 
 ## Aviso:
-<p>  Para resolução dos exercícios propostos,optei por usar uma lógica mais simplista e menos robusta uma que vez que esse repositório também tem o intuito de auxiliar quem está que está entrando no universo da programação.</p>
+<p>  Para resolução dos exercícios propostos,optei por usar uma lógica mais simplista e menos robusta uma que vez que esse repositório também tem o intuito de auxiliar quem está que  entrando no universo da programação.</p>
 
 
 
