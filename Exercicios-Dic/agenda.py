@@ -1,5 +1,9 @@
 import os
+
+import tabulate
+
 os.system('cls')
+from functions import*
 
 
 class EnumChoice:
@@ -9,38 +13,9 @@ class EnumChoice:
     EXCLUIR = 'x'
     EDITAR = 'e'
 
-#Funções cuja responsabilidade é verificar e validar informações passadas pelo usuário
-
-def entra_int():
-    while True:
-        try:
-         entrada = int(input('Idade: '))
-        except:
-            print('Idade inválida')
-        else:
-            return entrada
-
-#validando cpf->(tamanho da string):
-
-def entrada_cpf():
-    while True:
-        cpf = input('CPF: ')
-        if len(cpf)==11 and cpf.isnumeric():
-            cpf = cpf
-            break;
-        else:
-            print('CPF INVÁLIDO. TENTE NOVAMENTE')
-
-def entra_fone():
-   while True:
-        fone = input('FONE:(DD): ')
-        if len(fone)==11 and fone.isnumeric():
-            fone = fone
-            break;
-        else:
-            print('Telefone INVÁLIDO. TENTE NOVAMENTE')
 
 
+ 
 contatos = {}
 #cpf,nome,idade,telefone
 placeholder = ''
@@ -49,14 +24,14 @@ while True:
 
     match(op):
         case  EnumChoice.CADASTRAR:
-          cpf= entrada_cpf()
           nome = input('Nome: ').lower()
+          cpf= entrada_cpf()
           idade = entra_int()
           tel = entra_fone()
 
-          contatos[cpf] = {
+          contatos[nome] = {
+              'nome': cpf,
               'cpf': cpf,
-              'nome': nome,
               'idade':idade,
               'tel':tel
           }
@@ -77,17 +52,16 @@ while True:
 
                 try : 
                     nome = input('Nome: ').lower()
+                    cpf= entrada_cpf()
                     idade = entra_int()
-                    cpf = entrada_cpf()
-                    tel = input('Fone: ')
+                    tel = entra_fone()
 
-                    contatos[busca] = {
+                    contatos[nome] = {
+                        'nome': cpf,
                         'cpf': cpf,
-                        'nome': nome,
                         'idade':idade,
                         'tel':tel
                     }
-                    print('Contato editado.')
 
                 except KeyError:
                     print('Chave inválida.Tente novamente')
@@ -99,10 +73,11 @@ while True:
                 busca = input('Insira o cpf do contato o qual deseja excluir : ')
                 try : 
                  contatos[busca].pop
-                except:
+                except KeyError:
                     print('CPF inválido.Tente novamente')
                     
         case  EnumChoice.SAIR:
             print('Programa encerrado.')
             break
-print(contatos)
+
+print(tabulate(table, headers=["nome", "cpf", "idade","tel"], tablefmt="grid"))
