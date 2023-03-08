@@ -80,4 +80,4 @@ while True:
             print('Programa encerrado.')
             break
 
-print(tabulate(table, headers=["nome", "cpf", "idade","tel"], tablefmt="grid"))
+print(tabulate(table,  headers=["nome", "cpf", "idade","tel"], tablefmt="grid"))

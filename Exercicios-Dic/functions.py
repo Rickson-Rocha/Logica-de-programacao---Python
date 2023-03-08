@@ -1,4 +1,4 @@
-#Funções cuja responsabilidade é verificar e validar informações passadas pelo usuário
+#Funções cuja responsabilidade é verificar e validar informações passadas por usuário
 
 
 def entra_int():
