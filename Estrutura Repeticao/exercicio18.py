@@ -11,4 +11,4 @@ for i in range(qtdNumero):
         maiorNumero = numero
     elif menorNumero==0 or numero<menorNumero:
         menorNumero =  numero
-print(f'Soma dos valores repassados: {soma}  | Maior número encontrado : {maiorNumero} | menor número encontrado {menorNumero}')
+print(f'Soma dos valores repassados: {soma}  | Maior número encontrado : {maiorNumero} | menor número encontrado: {menorNumero}')
